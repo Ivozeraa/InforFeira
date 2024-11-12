@@ -1,0 +1,173 @@
+/* Container das imagens das ilhas */
+.islandsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+/* Estilo individual das ilhas */
+.island {
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.island:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagens das ilhas */
+.islandImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.islandImage:hover {
+    transform: scale(1.1);
+}
+
+/* Barra de progresso */
+.progressContainer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #8e01cf;
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Estilo do modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Conteúdo do modal */
+.modalContent {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título dentro do modal */
+.modalContent h3 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Estilos do textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    resize: none;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #8e01cf;
+}
+
+/* Botões do modal */
+.modalButtons button {
+    background-color: #8e01cf;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modalButtons button:hover {
+    background-color: #6e01a3;
+    transform: translateY(-2px);
+}
+
+/* Animação para o modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .island {
+        width: 140px;
+        height: 140px;
+    }
+
+    .islandsContainer {
+        justify-content: space-evenly;
+    }
+
+    .modalContent {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .modalButtons button {
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .island {
+        width: 110px;
+        height: 110px;
+    }
+
+    .modalContent {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modalButtons button {
+        padding: 12px;
+    }
+}

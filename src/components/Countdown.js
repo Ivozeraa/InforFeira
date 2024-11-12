@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importar o hook de navegação, caso use React Router
 import styles from "../css/countdown.module.css";
 
 export const Countdown = () => {
@@ -8,6 +9,8 @@ export const Countdown = () => {
     minutes: "00",
     seconds: "00",
   });
+
+  const navigate = useNavigate(); // Inicializar o hook de navegação
 
   useEffect(() => {
     const countDownTime = new Date("Nov 22, 2024 07:30:00").getTime();
@@ -25,7 +28,7 @@ export const Countdown = () => {
           seconds: "00",
         });
         setTimeout(() => {
-          window.location.href = "desafioinicial.html";
+          navigate("/index"); 
         }, 2000);
         return;
       }
@@ -46,11 +49,11 @@ export const Countdown = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [navigate]);
 
   return (
     <>
-      <div className={styles.main}></div> {/* Div de fundo */}
+      <div className={styles.main}></div>
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>Tempo restante</h2>
