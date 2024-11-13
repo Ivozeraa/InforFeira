@@ -31,7 +31,8 @@ function Island({ index, onComplete }) {
       onClick={handleOpenModal}
     >
       <img src={`path/to/island${index + 1}.jpg`} alt={`Ilha ${index + 1}`} />
-      {isCompleted && <div className={styles.overlay}>Concluído</div>}
+      {isCompleted && <div className={styles.overlay}>
+        <h3 className={styles.Concluido}>Concluído</h3></div>}
       
       <CustomModal
         isOpen={modalIsOpen}            // Passando o estado de abertura do modal
