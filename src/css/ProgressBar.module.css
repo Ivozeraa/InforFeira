@@ -1,0 +1,26 @@
+.progressBar {
+  width: 100%; 
+  background-color: #2b2b3c;
+  border-radius: 0; 
+  margin: 0; 
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
+}
+
+.progress {
+  height: 20px; /* Ajuste a altura conforme necessário */
+  background: linear-gradient(90deg, #8e01cf, rgb(234, 0, 255));
+  transition: width 0.4s ease-in-out;
+}
+
+.progressText {
+  display: block;
+  margin-top: 5px;
+  color: #8e01cf;
+  font-weight: 600;
+  text-align: center;
+}

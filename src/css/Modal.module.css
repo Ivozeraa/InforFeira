@@ -1,0 +1,92 @@
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Conteúdo do Modal */
+  .modalContent {
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 90%;
+    color: #ffffff;
+  }
+  
+  /* Título do modal */
+  .modalTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #8e01cf;
+    text-align: center;
+  }
+  
+  /* Label do input dentro do modal */
+  .modalLabel {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo do input */
+  .modalInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b2b3c;
+    color: #ffffff;
+  }
+  
+  /* Botão de envio */
+  .modalButton {
+    background-color: #8e01cf;
+    color: #1e1e2f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .modalButton:hover {
+    background-color: #590083;
+  }
+  
+  /* Cabeçalho do modal */
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Botão de fechar */
+  .closeButton {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #8300c0;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  
+  .closeButton:hover {
+    background-color: #3e015a;
+  }
