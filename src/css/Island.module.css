@@ -26,9 +26,8 @@
   transform: scale(1.05);
 }
 
-/* Modal Styling */
 .modalOverlay {
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -111,4 +110,13 @@
 
 .closeButton:hover {
   background-color: #3e015a;
+}
+
+.Concluido{
+  color: green;
+  transform: rotate(-45deg);
+  text-align: center;
+  top: 50px;
+  position: relative;
+  letter-spacing: 10px;
 }
