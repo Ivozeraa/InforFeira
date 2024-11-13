@@ -37,3 +37,57 @@
   max-width: 1200px;
   padding: 20px;
 }
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none; /* Garante que os confetes não interfiram com outros elementos */
+    animation: confettiAnimation 5s ease-out forwards; /* Animação de saída */
+  }
+  
+  /* Definindo animação de saída suave para os confetes */
+  @keyframes confettiAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(1000px); /* Confetes caem para baixo enquanto desaparecem */
+    }
+  }
+  
+  .congratsMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2rem;
+    z-index: 10;
+    animation: fadeIn 1s ease-out; /* Efeito de fade-in para a mensagem */
+  }
+  
+  .congratsMessage h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .congratsMessage p {
+    font-size: 1.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
