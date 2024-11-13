@@ -30,7 +30,7 @@ function Island({ index, onComplete }) {
       className={`${styles.island} ${isCompleted ? styles.completed : ''}`}
       onClick={handleOpenModal}
     >
-      <img src={`path/to/island${index + 1}.jpg`} alt={`Ilha ${index + 1}`} />
+      <img src={`/imgs/island${index + 1}.jpg`} alt={`Ilha ${index + 1}`} />
       {isCompleted && <div className={styles.overlay}>
         <h3 className={styles.Concluido}>Concluído</h3></div>}
       
