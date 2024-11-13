@@ -4,6 +4,7 @@ import styles from '../css/Island.module.css';
 
 function Island({ index, onComplete }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false); // Estado para verificar se o desafio já foi concluído
 
   // Função para abrir o modal
   const handleOpenModal = () => {
@@ -15,15 +16,28 @@ function Island({ index, onComplete }) {
     setModalIsOpen(false);
   };
 
+  // Função chamada ao completar o desafio
+  const handleComplete = () => {
+    if (!isCompleted) {
+      setIsCompleted(true); // Marca o desafio como concluído
+      onComplete(); // Chama a função de progresso apenas uma vez
+    }
+    handleCloseModal(); // Fecha o modal
+  };
+
   return (
-    <div className={styles.island} onClick={handleOpenModal}>
+    <div
+      className={`${styles.island} ${isCompleted ? styles.completed : ''}`}
+      onClick={handleOpenModal}
+    >
       <img src={`path/to/island${index + 1}.jpg`} alt={`Ilha ${index + 1}`} />
+      {isCompleted && <div className={styles.overlay}>Concluído</div>}
       
       <CustomModal
         isOpen={modalIsOpen}            // Passando o estado de abertura do modal
         onRequestClose={handleCloseModal} // Passando a função de fechamento
         index={index} 
-        onComplete={onComplete} 
+        onComplete={handleComplete} // Passando a função ajustada para completar o desafio
       />
     </div>
   );

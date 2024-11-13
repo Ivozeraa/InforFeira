@@ -6,7 +6,7 @@ function ProgressBar({ completed, total }) {
   return (
     <div className={styles.progressBar}>
       <div className={styles.progress} style={{ width: `${progress}%` }}></div>
-      <span className={styles.progressText}>{completed}/{total} completado</span>
+      <span className={styles.progressText}>{completed}/{total} Completado</span>
     </div>
   );
 }

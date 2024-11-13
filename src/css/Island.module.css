@@ -19,7 +19,7 @@
 
 .island:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 12px 8px #8e01cf;
+  box-shadow: 0 0 10px 1px #8e01cf;
 }
 
 .island:active {
