@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #7702ad;
+    color: white;
+  }
+  
+  .footerContent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .instagramIcon {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .instagramIcon:hover {
+    color: #e1306c;
+  }
+  
+  .footerMessage {
+    font-size: 18px;
+  }
+
+  

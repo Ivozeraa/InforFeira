@@ -15,6 +15,7 @@
   height: 20px; /* Ajuste a altura conforme necessário */
   background: linear-gradient(90deg, #8e01cf, rgb(234, 0, 255));
   transition: width 0.4s ease-in-out;
+  border-radius: 0 50px 50px 0;
 }
 
 .progressText {
