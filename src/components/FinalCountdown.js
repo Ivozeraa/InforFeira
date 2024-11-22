@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importar o hook de navegação, caso use React Router
-import styles from "../css/countdown.module.css";
+import styles from "../css/finalcountdown.module.css";
 
-export const Countdown = () => {
+export const FinalCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
     hours: "00",
@@ -13,7 +13,7 @@ export const Countdown = () => {
   const navigate = useNavigate(); // Inicializar o hook de navegação
 
   useEffect(() => {
-    const countDownTime = new Date("Nov 21, 2024 21:58:30").getTime();
+    const countDownTime = new Date("Nov 22, 2024 16:40:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -27,9 +27,6 @@ export const Countdown = () => {
           minutes: "00",
           seconds: "00",
         });
-        setTimeout(() => {
-          navigate("/finalcountdown"); 
-        }, 500);
         return;
       }
 
@@ -58,7 +55,7 @@ export const Countdown = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>Tempo restante</h2>
           <h1>
-            Salve a <span className={styles.highlight}>Informática!</span>
+            O tempo está <span className={styles.highlight}>Acabando!</span>
           </h1>
           <div className={styles.launchTime}>
             <div>
