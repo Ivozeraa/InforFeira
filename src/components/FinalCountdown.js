@@ -55,7 +55,7 @@ export const FinalCountdown = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>Tempo restante</h2>
           <h1>
-            O tempo está <span className={styles.highlight}>Acabando!</span>
+            Save the <span className={styles.highlight}>Computer!</span>
           </h1>
           <div className={styles.launchTime}>
             <div>
