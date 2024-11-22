@@ -13,7 +13,7 @@ export const Countdown = () => {
   const navigate = useNavigate(); // Inicializar o hook de navegação
 
   useEffect(() => {
-    const countDownTime = new Date("Nov 22, 2024 08:00:00").getTime();
+    const countDownTime = new Date("Nov 22, 2024 08:11:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
